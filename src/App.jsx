@@ -61,7 +61,7 @@ function App() {
               </div>
 
               {/* Footer */}
-              <div className="mt-4 flex items-center justify-center">
+              <div className="mt-4 flex items-center justify-between">
                 <div className="bg-white py-2 px-4 rounded">$123</div>
                 <button className="bg-red-700 hover:bg-red-900 active:bg-red-500 text-white px-4 py-2 rounded text-sm">
                   Get Started
