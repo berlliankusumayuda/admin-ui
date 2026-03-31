@@ -26,10 +26,10 @@ function App() {
     <>
       <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
         {courses.map((course, index) => (
-          <div key={index} className="shadow rounded-lg overflow-hidden flex flex-col"
+          <div key={index} className="shadow rounded-lg overflow-hidden flex flex-col
           hover:border border-gray-500
           hover:shadow-lg hover:scale-105 transition-transform duration-300
-          >
+          ">
             {/* Image */}
             <img
               src="https://www.placehold.co/300x200"
@@ -55,7 +55,7 @@ function App() {
                     className="w-12 h-12 rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-sm font-medium">Author's Name</p>
+                    <p className="text-sm font-medium">Author&apos;s Name</p>
                     <p className="text-xs text-gray-500">Designer</p>
                   </div>
                 </div>
