@@ -28,7 +28,8 @@ function App() {
         {courses.map((course, index) => (
           <div key={index} className="shadow rounded-lg overflow-hidden flex flex-col"
           hover:border border-gray-500
-          hover:shadow-lg hover:scale-105 transition-transform duration-300>
+          hover:shadow-lg hover:scale-105 transition-transform duration-300
+          >
             {/* Image */}
             <img
               src="https://www.placehold.co/300x200"
