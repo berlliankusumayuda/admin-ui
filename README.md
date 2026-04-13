@@ -2,7 +2,7 @@ Berikut contoh **README.md** yang menarik, profesional, dan mudah kamu sesuaikan
 
 ---
 
-# 🚀 Nama Project Kamu
+# 🚀 Pemrograman Sisi Klien
 
 > Deskripsi singkat tentang project kamu. Jelaskan tujuan utama project ini dalam 1–2 kalimat yang jelas dan menarik.
 
@@ -88,24 +88,6 @@ Project ini bisa di-deploy menggunakan:
 - Vercel
 - Netlify
 - GitHub Pages
-
----
-
-## 🤝 Kontribusi
-
-Kontribusi sangat terbuka!
-
-1. Fork repository
-2. Buat branch baru (`feature/fitur-baru`)
-3. Commit perubahan
-4. Push ke branch
-5. Buat Pull Request
-
----
-
-## 📄 Lisensi
-
-Project ini menggunakan lisensi **MIT**.
 
 ---
 
