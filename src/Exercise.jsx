@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import UserCard from "./UserCard";
 
 function Exercise() {
@@ -11,15 +11,23 @@ function Exercise() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <UserCard 
           name="Ian"
-          email="gmail.com"
-          street="abc"
-          city="ef"/>
-          <UserCard name="Sulthan"/>
-          <UserCard name="Nabhaan"/>
+          email="Ian@gmail.com"
+          street="jl.sambiroto"
+          city="semarang"/>
+          <UserCard 
+          name="Iannn"
+          email="Iannn@gmail.com"
+          street="jl.sambiroto 3"
+          city="semarang"/>
+          <UserCard 
+          name="Iannnnn"
+          email="Iannnnn@gmail.com"
+          street="jl.sambiroto 4"
+          city="semarang"/>
         </div>
       </div>
     </>
   );
 }
-
-export default Exercise;
+       
+export default Exercise
