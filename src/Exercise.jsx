@@ -12,17 +12,17 @@ function Exercise() {
           <UserCard 
           name="Ian"
           email="Ian@gmail.com"
-          street="jl.sambiroto"
+          street="jl.Wologito 1"
           city="semarang"/>
           <UserCard 
           name="Iannn"
           email="Iannn@gmail.com"
-          street="jl.sambiroto 3"
+          street="jl.Wologito 2"
           city="semarang"/>
           <UserCard 
           name="Iannnnn"
           email="Iannnnn@gmail.com"
-          street="jl.sambiroto 4"
+          street="jl.Wologito 3"
           city="semarang"/>
         </div>
       </div>
