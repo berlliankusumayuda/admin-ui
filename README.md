@@ -4,10 +4,6 @@ Berikut contoh **README.md** yang menarik, profesional, dan mudah kamu sesuaikan
 
 # 🚀 Pemrograman Sisi Klien
 
-> Deskripsi singkat tentang project kamu. Jelaskan tujuan utama project ini dalam 1–2 kalimat yang jelas dan menarik.
-
-![Preview Project](./preview.png)
-
 ---
 
 ## ✨ Fitur Utama
