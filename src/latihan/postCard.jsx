@@ -7,10 +7,10 @@ function PostCard({ id, userId, title, body }) {
     <div className="
       bg-white p-5 rounded-lg shadow flex flex-col gap-3
       transition-all duration-200 cursor-pointer
-      hover:scale-105 hover:border hover:border-black hover:bg-pink-50
+      hover:scale-105 hover:border hover:border-gray-300 hover:bg-pink-50
     ">
       {/* Judul Post */}
-      <h2 className="text-center font-bold text-black capitalize text-sm">
+      <h2 className="text-center font-bold text-black-700 capitalize text-sm">
         {title}
       </h2>
 
@@ -25,7 +25,7 @@ function PostCard({ id, userId, title, body }) {
         className={`
           px-4 py-2 rounded-md text-white text-sm font-medium transition-all duration-200
           ${clicked
-            ? 'bg-special-Red2 hover:brightness-125'
+            ? 'bg-special-red2 hover:brightness-125'
             : 'bg-gray-500 hover:brightness-125'
           }
         `}

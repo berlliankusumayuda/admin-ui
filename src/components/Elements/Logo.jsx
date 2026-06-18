@@ -1,9 +1,17 @@
 import React from 'react'
 
-function Logo() {
+function Logo(props) {
+  const { variant = "primary"} = props;
+
+  const variantClasses = {
+    primary: "text-primary text-4xl",
+    secondary: "text-primary text-sm sm:text-2xl",
+  
+  };
   return (
     <>
-    <div className="flex justify-center font-poppins tracking-wide text-primary text-4xl">
+    <div className="flex justify-center font-poppins tracking-wide
+    ${variantCLasses[variant] ||variantClasses.primary}`}">
           <span className="font-bold">FINE</span>
           bank
           <span className="font-bold">.IO</span>
