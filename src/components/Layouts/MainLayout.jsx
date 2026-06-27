@@ -64,7 +64,7 @@ const {theme, setTheme} = useContext(ThemeContext);
                     }`
                   }
 				>
-					<div className="mx-auto sm:mx-0">{item.icon}</div>
+					<div className="mx-auto sm:mx-0">{item.Icon}</div>
 					<div className="ms-3 hidden sm:block">{item.name}</div>
 				</NavLink>
 			))}
