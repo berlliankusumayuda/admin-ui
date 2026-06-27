@@ -94,7 +94,7 @@ const {theme, setTheme} = useContext(ThemeContext);
 			        <div className="flex justify-between items-center">
                         <div>Avatar</div>
                         <div className="hidden sm:block">
-                            <div>{user.name}</div>
+                            <div>Berlian</div>
                             <div>View Profile</div>
                         </div>
                         <div className="hidden sm:block">
@@ -106,7 +106,7 @@ const {theme, setTheme} = useContext(ThemeContext);
             <div className=" bg-special-mainBg flex-1 flex flex-col">
                 <div className="border border-b border-gray-05 px-6 py-7 flex justify-between items-center">
                     <div className="flex items-center">
-                        <div className="font-bold text-2xl me-6">{user.name}</div>
+                        <div className="font-bold text-2xl me-6">Berlian Kusumayuda</div>
                         <div className="text-gray-03 flex">
                             <Icon.ChevronRight size={20} />
                             <span>May 19, 2023</span> 
