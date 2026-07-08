@@ -100,8 +100,8 @@ function FormSignIn({ onSubmit }) {
         {/* form end */}
         				{/* teks start */}
         <div className="my-9 px-7 flex flex-col justify-center items-center text-xs text-gray-03">
-          <div className="border border-gray-05 w-full"></div>
-          <div className="px-2 bg-special-mainBg absolute"> or sign in with</div>
+          <div className="border border-gray-05 dark:border-white/10 w-full"></div>
+          <div className="px-2 bg-special-mainBg dark:bg-defaultBlack dark:text-gray-400 absolute"> or sign in with</div>
         </div>
         {/* teks end */}
         {/* sign in with google start */}

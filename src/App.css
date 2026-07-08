@@ -6,6 +6,8 @@ html {
 
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark, .dark *));
+
 @theme {
   --font-body: "Inter", sans-serif;
   --font-poppins: "Montserrat", sans-serif;

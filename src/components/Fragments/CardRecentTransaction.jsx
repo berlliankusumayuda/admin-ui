@@ -23,7 +23,7 @@ function CardRecentTransaction(props) {
 					className={
                     active == tab
                       ? "px-4 font-bold text-primary border-b-4 border-primary"
-                      : "px-4 font-bold text-gray-01"
+                      : "px-4 font-bold text-gray-01 dark:text-gray-300"
                   }
                   onClick={() => setActive(tab)}
                   value={tab}
@@ -35,7 +35,7 @@ function CardRecentTransaction(props) {
 			{filteredData.map((item) => (
               <div key={item.id} className="flex justify-between my-6">
                 <div className="flex">
-                  <div className="bg-special-bg text-gray-02 px-3 rounded-lg flex flex-col place-content-center">
+                  <div className="bg-special-bg dark:bg-white/10 text-gray-02 dark:text-gray-200 px-3 rounded-lg flex flex-col place-content-center">
                     {item.icon}
                   </div>
                   <div className="ms-4">
@@ -43,15 +43,15 @@ function CardRecentTransaction(props) {
                       {item.transactionName}
                     </span>
                     <br />
-                    <span className="text-gray-02">{item.shopName}</span>
+                    <span className="text-gray-02 dark:text-gray-400">{item.shopName}</span>
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="text-xl font-bold text-gray-02">
+                  <span className="text-xl font-bold text-gray-02 dark:text-gray-200">
                     ${item.amount}
                   </span>
                   <br />
-                  <span className="text-gray-02">{item.date}</span>
+                  <span className="text-gray-02 dark:text-gray-400">{item.date}</span>
                 </div>
               </div>
             ))}

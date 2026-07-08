@@ -21,9 +21,14 @@ function SignIn() {
 
 	const handleLogin = async (email, password) => {
     try {
-      const { refreshToken } = await loginService(email, password);
+      const data = await loginService(email, password);
 
-      login(refreshToken);
+      // Beberapa backend JWT membedakan accessToken (untuk akses endpoint)
+      // dan refreshToken (khusus untuk refresh token, bukan untuk Bearer auth).
+      // Kalau ada accessToken, pakai itu. Kalau tidak, baru fallback ke refreshToken.
+      const token = data.accessToken || data.token || data.refreshToken;
+
+      login(token);
     } catch (err) {
       setSnackbar({ open: true, message: err.msg, severity: "error" });
     }

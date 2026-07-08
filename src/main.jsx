@@ -7,6 +7,7 @@ import Form from "./latihan/Form.jsx";
 import { CounterContextProvider } from "./context/counterContext.jsx";
 import { ThemeContextProvider } from "./context/themeContext.jsx";
 import { AuthContextProvider } from "./context/authContext.jsx";
+import { DarkModeContextProvider } from "./context/darkModeContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,7 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </CounterContextProvider> */}
     <AuthContextProvider>
       <ThemeContextProvider>
-        <App />
+        <DarkModeContextProvider>
+          <App />
+        </DarkModeContextProvider>
       </ThemeContextProvider>
     </AuthContextProvider>
     {/* <Form /> */}

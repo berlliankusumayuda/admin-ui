@@ -7,6 +7,10 @@ import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../../context/themeContext";
 import { AuthContext } from "../../context/authContext";
 import { logoutService } from "../../services/authService";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
+import { DarkModeContext } from "../../context/darkModeContext";
+import DarkModeToggle from "../Elements/DarkModeToggle";
 
 function MainLayout(props) {
   const { children } = props;
@@ -20,6 +24,7 @@ function MainLayout(props) {
 ];
 
 const {theme, setTheme} = useContext(ThemeContext);
+const { darkMode } = useContext(DarkModeContext);
 
   const menu = [
     { id: 1, name: "Overview", Icon: <Icon.Overview />, link: "/" },
@@ -32,7 +37,10 @@ const {theme, setTheme} = useContext(ThemeContext);
   ];
 
   const { user, logout } = useContext(AuthContext);
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
+
 	  const handleLogout = async () => {
+    setIsLoggingOut(true);
     try {
       await logoutService();
       logout(); 
@@ -41,12 +49,14 @@ const {theme, setTheme} = useContext(ThemeContext);
       if (err.status === 401) {
         logout();
       }
+    } finally {
+      setIsLoggingOut(false);
     }
   };
   
   return (
     <>
-	    <div className={`flex min-h-screen ${theme.name}`}>
+	    <div className={`flex min-h-screen ${theme.name} ${darkMode ? "dark" : ""}`}>
             <aside className="bg-defaultBlack w-28 sm:w-64 text-special-bg2 flex flex-col justify-between px-7 py-12">
                 <div>
 			        <div className="mb-10">
@@ -79,6 +89,7 @@ const {theme, setTheme} = useContext(ThemeContext);
                             onClick={() => setTheme(t)}
                 ></div>
               ))}
+              <DarkModeToggle variant="icon" />
             </div>
           </div>
 		        <div>
@@ -103,10 +114,10 @@ const {theme, setTheme} = useContext(ThemeContext);
                     </div>
 		        </div>
             </aside>
-            <div className=" bg-special-mainBg flex-1 flex flex-col">
-                <div className="border border-b border-gray-05 px-6 py-7 flex justify-between items-center">
+            <div className="bg-special-mainBg dark:bg-defaultBlack flex-1 flex flex-col">
+                <div className="border border-b border-gray-05 dark:border-special-bg3 px-6 py-7 flex justify-between items-center">
                     <div className="flex items-center">
-                        <div className="font-bold text-2xl me-6">Berlian Kusumayuda</div>
+                        <div className="font-bold text-2xl me-6 dark:text-white">Berlian Kusumayuda</div>
                         <div className="text-gray-03 flex">
                             <Icon.ChevronRight size={20} />
                             <span>May 19, 2023</span> 
@@ -120,6 +131,13 @@ const {theme, setTheme} = useContext(ThemeContext);
                 <main className="flex-1 px-6 py-4">{children}</main>
             </div>
         </div>
+        {/* Backdrop loading saat proses logout (Soal 5) */}
+        <Backdrop
+          sx={{ color: "#fff", zIndex: (t) => t.zIndex.drawer + 1 }}
+          open={isLoggingOut}
+        >
+          <CircularProgress color="inherit" />
+        </Backdrop>
     </>
   );
 }

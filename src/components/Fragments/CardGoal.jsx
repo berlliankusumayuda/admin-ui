@@ -14,29 +14,29 @@ function CardGoal(props) {
 	              <span className="text-2xl font-bold me-4">
 	                ${data.target_amount}
 	              </span>
-	              <div className="p-2 bg-gray-05 text-gray-01 rounded-md box-border">
+	              <div className="p-2 bg-gray-05 dark:bg-white/10 text-gray-01 dark:text-gray-200 rounded-md box-border">
 	                <Icon.Edit size={16} />
 	              </div>
 	            </div>
 	            <div>Nov, 2023</div>
 	          </div>
-	          <div className="border-b-2 border-gray-05 my-4"></div>
+	          <div className="border-b-2 border-gray-05 dark:border-white/10 my-4"></div>
 	          <div className="flex justify-between">
 	            <div>
-	              <div className="flex mt-3 mb-10 text-gray-01">
+	              <div className="flex mt-3 mb-10 text-gray-01 dark:text-gray-300">
 	                <Icon.Award />
 	                <div className="ms-2">
 	                  <div>Target Achieved</div>
-	                  <div className="font-bold text-xl text-black">
+	                  <div className="font-bold text-xl text-black dark:text-white">
 	                    ${data.present_amount}
 	                  </div>
 	                </div>
 	              </div>
-	              <div className="flex text-gray-01">
+	              <div className="flex text-gray-01 dark:text-gray-300">
 	                <Icon.Target />
 	                <div className="ms-2">
 	                  <div>This Month Target</div>
-	                  <div className="font-bold text-xl text-black">
+	                  <div className="font-bold text-xl text-black dark:text-white">
 	                    ${data.target_amount}
 	                  </div>
 	                </div>

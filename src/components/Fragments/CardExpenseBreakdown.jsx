@@ -15,16 +15,16 @@ function CardExpenseBreakdown(props) {
               <div key={item.id} className="flex items-center justify-between">
                 <div className="flex">
                   <div>
-                    <div className="bg-special-bg text-gray-02 px-3 py-5 rounded-lg flex flex-col place-content-center">
+                    <div className="bg-special-bg dark:bg-white/10 text-gray-02 dark:text-gray-200 px-3 py-5 rounded-lg flex flex-col place-content-center">
                       {item.icon}
                     </div>
                   </div>
                   <div className="ms-4">
-                    <span className="text-gray-02">{item.category}</span>
+                    <span className="text-gray-02 dark:text-gray-300">{item.category}</span>
                     <br />
                     <span className="font-bold text-lg">${item.amount}</span>
                     <div className="flex">
-                      <span className="text-gray-02">{item.percentage}%*</span>{" "}
+                      <span className="text-gray-02 dark:text-gray-400">{item.percentage}%*</span>{" "}
                       {item.arrow}
                     </div>
                   </div>

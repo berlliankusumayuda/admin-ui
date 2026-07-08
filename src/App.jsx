@@ -4,6 +4,7 @@ import SignUpPage from "./pages/SignUp";
 import ErrorPage from "./pages/error";
 import DashboardPage from "./pages/dashboard";
 import BalancePage from "./pages/balance"; 
+import ExpensesPage from "./pages/expenses";
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import { Children, useContext } from "react";
 import { AuthContext } from "./context/authContext";
@@ -66,6 +67,14 @@ function App() {
       element: (
         <RequireAuth>
           <BalancePage />
+        </RequireAuth>
+      ),
+    },
+    {
+      path: "/expense",
+      element: (
+        <RequireAuth>
+          <ExpensesPage />
         </RequireAuth>
       ),
     },
