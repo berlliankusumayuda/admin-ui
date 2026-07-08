@@ -1,5 +1,3 @@
-Berikut contoh **README.md** yang menarik, profesional, dan mudah kamu sesuaikan untuk project React kamu:
-
 ---
 
 # 🚀 Pemrograman Sisi Klien
